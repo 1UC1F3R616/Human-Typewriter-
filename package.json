@@ -1,0 +1,39 @@
+{
+  "name": "human-typewriter",
+  "version": "1.0.0",
+  "description": "Computer Text to Human Handwriting Conversion Automated",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js -e js,hbs,css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/1UC1F3R616/Human-Typewriter"
+  },
+  "keywords": [
+    "nodejs",
+    "human",
+    "automation",
+    "typewriter",
+    "2020",
+    "HumanHandwriting",
+    "awesome",
+    "react"
+  ],
+  "author": "1UC1F3R616",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "jimp": "^0.13.0",
+    "multer": "^1.4.2",
+    "pdfkit": "^0.11.0",
+    "tesseract.js": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

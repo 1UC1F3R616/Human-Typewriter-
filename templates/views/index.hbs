@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTW Web App</title>
+</head>
+
+<body>
+
+    <div id="grad1"></div>
+    <div class="main-content">
+        {{>header}}
+
+        <H1 id="heading">Convert any Typed/Text document into Human Typing</H1>
+
+        {{!-- SINGLE FILE --}}
+        <div class="ui mini form">
+            <form action="/uploadfile" enctype="multipart/form-data" method="POST">
+                <input class="field" type="file" name="myFile" />
+                <input class="ui submit button" type="submit" value="Upload a file" />
+            </form>
+        </div>
+
+        </br></br>
+        {{!-- SINGLE IMAGE --}}
+        <div class="ui mini form">
+            <form action="/imageToHand" enctype="multipart/form-data" method="POST">
+                <input class="field" type="file" name="myFile" />
+                <input class="ui submit button" type="submit" value="Upload an Image" />
+            </form>
+        </div>
+
+        </br></br>
+        {{!-- IMAGE LINK --}}
+        <div class="ui form">
+            <form action="/imageToHand" Content-Type='application/json' method="POST">
+                <input type="url" placeholder="Paste A Link Here" name="imageLink">
+                <input class="ui submit button" type="submit" value="Send Image Link" />
+            </form>
+        </div>
+
+    </div>
+
+
+
+    {{>footer}}
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    background: linear-gradient( #0CF3EC, #EC0CF3) !important;
+}
+
+#heading {
+    color: #F3EC0C;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 0CF3EC
+EC0CF3
+F3EC0C */
