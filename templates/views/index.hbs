@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color" content="#09f" />
-    <meta name="description"
-        content="Easily write assignments in human handwriting">
+    <meta name="description" content="Easily write assignments in human handwriting">
     <meta name="keywords"
         content="text to handwriting, text-to-handwrting, 1UC1F3R616, convert text to image, write assignment online">
     <meta name="mobile-web-app-capable" content="yes">
@@ -21,8 +20,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Text to Handwriting">
     <meta property="og:url" content="https://htw1998.herokuapp.com/" />
-    <meta property="og:description"
-        content="Easily write assignments in human handwriting">
+    <meta property="og:description" content="Easily write assignments in human handwriting">
     <meta property="og:site_name" content="Text to Handwriting">
 
     <meta property="og:image:secure_url" itemprop="image"
@@ -34,7 +32,7 @@
 
     <meta name=twitter:card content=summary_large_image />
     <meta name=twitter:creator content=@1R616 />
-  
+
     <title>HTW Web App</title>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -58,8 +56,8 @@
         <H1 id="heading">Convert any Typed/Text document into Human Typing</H1>
 
         <!-- GitHub Corner logo -->
-        <a tabindex="0" href="https://github.com/1UC1F3R616/Human-Typewriter-" rel="noopener noreferrer"
-            target="_blank" class="github-corner" aria-label="View source on GitHub">
+        <a tabindex="0" href="https://github.com/1UC1F3R616/Human-Typewriter-" rel="noopener noreferrer" target="_blank"
+            class="github-corner" aria-label="View source on GitHub">
             <svg width="80" height="80" viewBox="0 0 250 250"
                 style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
                 <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -96,6 +94,15 @@
                 <input type="url" placeholder="Paste A Link Here" name="imageLink">
                 <input class="ui submit button" type="submit" value="Send Image Link" />
             </form>
+        </div>
+
+        </br></br>
+        {{!-- Text Input --}}
+        <div class="ui form">
+        <textarea type="text" placeholder="Enter Text here" rows=3 name="textConverstion" form="textForm"></textarea>
+        <form action="/uploadfile" id="textForm" method="POST">
+            <input  class="ui submit button" type="submit" value="Submit Text">
+        </form>
         </div>
 
     </div>

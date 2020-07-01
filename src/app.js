@@ -444,10 +444,20 @@ app.post('/uploadfile', upload.single('myFile'), async (req, res, next) => {
     }
 
     try{
-        const fileData = req.file.buffer
-        addImages({BUFFER_DATA:fileData, DATASET_NAME:'dataset1', NEXT_LINE_GAP:103, CLOSENESS:52})
-        // CLOSENESS=53 | 50(DS1) | 75 (DS2) | 63 (DS2)
-        // NEXT_LINE_GAP = 103 (DS1) | 120 (DS2) | (DS3)
+        try{
+            const fileData = req.file.buffer
+            addImages({BUFFER_DATA:fileData, DATASET_NAME:'dataset1', NEXT_LINE_GAP:103, CLOSENESS:52})
+            // CLOSENESS=53 | 50(DS1) | 75 (DS2) | 63 (DS2)
+            // NEXT_LINE_GAP = 103 (DS1) | 120 (DS2) | (DS3)
+            console.log('me')
+        } catch (e) {
+            Data = req.body.textConverstion
+            if (!Data) {
+                throw new Error('Got Empty Text')
+            }
+            addImages({DATA:Data, DATASET_NAME:'dataset1', NEXT_LINE_GAP:103, CLOSENESS:52})
+        }
+        
     } catch (error) {
         res.status(400).send({error: error.message, Reason: 'Select a file first'})
     }
